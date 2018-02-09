@@ -1,12 +1,11 @@
 class Anagram
-  def initialize(word1, word2)
+  def initialize(word1)
     @word1 = word1
-    @word2 = word2
   end
 
-  def compare
+  def compare(word2)
     sort1 = @word1.downcase.chars.sort.join
-    sort2 = @word2.downcase.chars.sort.join
+    sort2 = word2.downcase.chars.sort.join
 
     letters_only1 = sort1.gsub(/[^a-z]/, '')
     letters_only2 = sort2.gsub(/[^a-z]/, '')
