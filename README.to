@@ -39,7 +39,9 @@ From root directory, run the following to view successful tests:
       Input: "cat", "dog"
       Output: "these words are antigrams"
 
-*
+* Program accounts for multi-word strings with characters.
+      Input: "Nag a ram.", "anagram"
+      Output: "these are anagrams"
 
 ## Technologies Used
 
