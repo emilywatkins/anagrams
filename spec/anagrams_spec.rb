@@ -19,4 +19,9 @@ describe('Anagram#compare')do
     expect(words.compare()).to(eq('this isn\'t a word'))
   end
 
+  it ('evaluates if words are antigrams, no letters in common') do
+    words = Anagram.new('cat', 'dog')
+    expect(words.compare()).to(eq('these words are antigrams'))
+  end
+
 end
