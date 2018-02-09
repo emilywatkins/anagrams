@@ -35,7 +35,7 @@ class Anagram
       if array3.length < 1
         return 'these words are antigrams'
       else
-        return 'these words are not anagrams'
+        return "these words are not anagrams but #{array3.length} letters do match: #{array3.join ', '}"
       end
 
     end
