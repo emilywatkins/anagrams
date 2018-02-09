@@ -21,17 +21,18 @@ class Anagram
 
     if sort1 == sort2
       return 'these words are anagrams'
-    end
-
-    array1.each do |a|
-      if array2.include? a
-        array3.push a
+    else
+      array1.each do |a|
+        if array2.include? a
+          array3.push a
+        end
+        array3
       end
-      array3
-    end
 
-    if array3.length < 1
-      return 'these words are antigrams'
+      if array3.length < 1
+        return 'these words are antigrams'
+      end
+
     end
 
 
