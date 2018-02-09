@@ -8,4 +8,10 @@ describe('Anagram#compare')do
     words = Anagram.new('cat', 'tac')
     expect(words.compare()).to(eq('these words are anagrams'))
   end
+
+  it ('takes into account mixed cases') do
+    words = Anagram.new('cat', 'TaC')
+    expect(words.compare()).to(eq('these words are anagrams'))
+  end
+
 end
