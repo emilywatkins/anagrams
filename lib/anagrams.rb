@@ -8,18 +8,22 @@ class Anagram
     sort1 = @word1.downcase.chars.sort.join
     sort2 = @word2.downcase.chars.sort.join
 
-    array1 = sort1.split("")
-    array2 = sort2.split("")
+    letters_only1 = sort1.gsub(/[^a-z]/, '')
+    letters_only2 = sort2.gsub(/[^a-z]/, '')
+
+    array1 = letters_only1.split("")
+    array2 = letters_only2.split("")
     array3 = []
 
-    count_vowels1 = sort1.chars.count {|l| l =~ /[aeiou]/}
-    count_vowels2 = sort2.chars.count {|l| l =~ /[aeiou]/}
+    count_vowels1 = letters_only1.chars.count {|c| c =~ /[aeiou]/}
+    count_vowels2 = letters_only2.chars.count {|c| c =~ /[aeiou]/}
+
 
     if count_vowels1 == 0 || count_vowels2 == 0
       return 'one of these words isn\'t a word'
     end
 
-    if sort1 == sort2
+    if letters_only1 == letters_only2
       return 'these words are anagrams'
     else
       array1.each do |a|
@@ -31,6 +35,8 @@ class Anagram
 
       if array3.length < 1
         return 'these words are antigrams'
+      else
+        return 'these words are not anagrams'
       end
 
     end

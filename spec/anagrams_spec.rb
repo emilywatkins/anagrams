@@ -24,9 +24,9 @@ describe('Anagram#compare')do
     expect(words.compare()).to(eq('these words are antigrams'))
   end
 
-  it ('evaluates multiple-word sentences with characters') do
+  it ('evaluates multiple-word strings with characters') do
     words = Anagram.new('Nag a ram.', 'anagram')
-    expect(words.compare()).to(eq('these are anagrams'))
+    expect(words.compare()).to(eq('these words are anagrams'))
   end
 
 end
