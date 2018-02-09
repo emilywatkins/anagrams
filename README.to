@@ -43,6 +43,10 @@ From root directory, run the following to view successful tests:
       Input: "Nag a ram.", "anagram"
       Output: "these are anagrams"
 
+* If words are not anagrams or antigrams, it will return the shared letters.
+      Input: "batty", "cat"
+      Output: "these words are not anagrams but 2 letters do match: a, t"
+
 ## Technologies Used
 
 * Ruby

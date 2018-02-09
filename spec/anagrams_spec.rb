@@ -29,9 +29,14 @@ describe('Anagram#compare')do
     expect(word.compare('anagram')).to(eq('these words are anagrams'))
   end
 
-  it ('if not anagrams or antigrams, returns letters that do match') do
+  it ('returns letters that do match if not anagrams or antigrams') do
     word = Anagram.new('cat')
     expect(word.compare('batty')).to(eq('these words are not anagrams but 2 letters do match: a, t'))
+  end
+
+  it ('checks if words contain 3 of the same letter in a row (not a word)') do
+    word = Anagram.new('boomshakalaka')
+    expect(word.compare('bangaraaaang')).to(eq('one of these words is not a word'))
   end
 
 end
