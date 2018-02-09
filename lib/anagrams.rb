@@ -11,7 +11,7 @@ class Anagram
     if sort1 == sort2
       "these words are anagrams"
     else
-      "these words aren't"
+      "these words aren't anagrams"
     end
 
   end
