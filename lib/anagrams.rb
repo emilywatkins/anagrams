@@ -5,11 +5,13 @@ class Anagram
   end
 
   def compare
-    sort1 = @word1.chars.sort.join
-    sort2 = @word2.chars.sort.join
+    sort1 = @word1.downcase.chars.sort.join
+    sort2 = @word2.downcase.chars.sort.join
 
     if sort1 == sort2
       "these words are anagrams"
+    else
+      "these words aren't"
     end
 
   end
