@@ -16,7 +16,7 @@ describe('Anagram#compare')do
 
   it ('evaluates if input is a word, i.e. contains vowels') do
     words = Anagram.new('cat', 'TC')
-    expect(words.compare()).to(eq('this isn\'t a word'))
+    expect(words.compare()).to(eq('one of these words isn\'t a word'))
   end
 
   it ('evaluates if words are antigrams, no letters in common') do

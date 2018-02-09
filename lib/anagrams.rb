@@ -10,10 +10,18 @@ class Anagram
 
     array1 = sort1.split("")
     array2 = sort2.split("")
-
     array3 = []
 
-    count_vowels = sort2.chars.count {|l| l =~ /[aeiou]/}
+    count_vowels1 = sort1.chars.count {|l| l =~ /[aeiou]/}
+    count_vowels2 = sort2.chars.count {|l| l =~ /[aeiou]/}
+
+    if count_vowels1 == 0 || count_vowels2 == 0
+      return 'one of these words isn\'t a word'
+    end
+
+    if sort1 == sort2
+      return 'these words are anagrams'
+    end
 
     array1.each do |a|
       if array2.include? a
@@ -22,23 +30,10 @@ class Anagram
       array3
     end
 
-    if array3.length > 0
-      return 'these words have characters in common'
-    else
+    if array3.length < 1
       return 'these words are antigrams'
     end
 
-    if count_vowels == 0
-      return 'this isn\'t a word'
-    end
-
-
-
-    if sort1 == sort2
-      'these words are anagrams'
-    else
-      'these words aren\'t anagrams'
-    end
 
   end
 end
