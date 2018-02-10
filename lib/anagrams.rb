@@ -17,6 +17,20 @@ class Anagram
     count_vowels1 = letters_only1.chars.count {|c| c =~ /[aeiou]/}
     count_vowels2 = letters_only2.chars.count {|c| c =~ /[aeiou]/}
 
+    consecutive_check1 = @word1.chars.chunk{|c| c}.map{|c, a| a.size}
+    consecutive_check2 = word2.chars.chunk{|c| c}.map{|c, a| a.size}
+
+    consecutive_check1.each do |a|
+      if a > 2
+        return 'one of these words is not a word'
+      end
+    end
+
+    consecutive_check2.each do |a|
+      if a > 2
+        return 'one of these words is not a word'
+      end
+    end
 
     if count_vowels1 == 0 || count_vowels2 == 0
       return 'one of these words isn\'t a word'

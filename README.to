@@ -29,7 +29,7 @@ From root directory, run the following to view successful tests:
 
 * Program is not case sensitive.
       Input: "Cat", "Tac"
-      Output: "these words are Anagrams"
+      Output: "these words are anagrams"
 
 * Program checks for non-words (words without vowels).
       Input: "cat", "tc"
@@ -46,6 +46,10 @@ From root directory, run the following to view successful tests:
 * If words are not anagrams or antigrams, it will return the shared letters.
       Input: "batty", "cat"
       Output: "these words are not anagrams but 2 letters do match: a, t"
+
+* Program checks if words contain 3 or more consecutive repeating numbers (not a word).
+      Input: "boomshakalaka", "bangaraaaang"
+      Output: "one of these words is not a word"
 
 ## Technologies Used
 
